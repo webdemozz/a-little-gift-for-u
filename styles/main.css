@@ -17,10 +17,16 @@ html, body {
   cursor: pointer;
 }
 
+/* TRÁI TIM TỰ CO THEO MÀN HÌNH */
 .heart {
   position: absolute;
+  width: 45vmin;
+  height: 45vmin;
+  max-width: 300px;
+  max-height: 300px;
   top: -50%;
   transform: rotate(-45deg);
+  box-sizing: border-box;
 }
 
 .heart:before,
@@ -46,7 +52,11 @@ html, body {
 
 @keyframes love {
   0% {
-      top: 110%;
+    top: -20%;
+  }
+
+  100% {
+    top: 110%;
   }
 }
 
@@ -58,11 +68,11 @@ html, body {
   color: #ff4d6d;
   font-size: 2em;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   z-index: 1000;
   width: 80%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255,255,255,0);
   border-radius: 15px;
   pointer-events: none;
 }
@@ -90,38 +100,66 @@ html, body {
   transform: translateX(-50%) scale(1.05);
 }
 
+
+/* ĐIỆN THOẠI */
 @media (max-width: 600px) {
+
+  .heart {
+    width: 55vw;
+    height: 55vw;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
   .message {
-    font-size: 1.5em; 
-    padding: 10px; 
+    font-size: 1.5em;
+    padding: 10px;
   }
 
   .next-button {
-    padding: 10px 20px; 
-    font-size: 1em; 
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
+
+/* MÁY TÍNH BẢNG */
 @media (min-width: 601px) and (max-width: 1024px) {
+
+  .heart {
+    width: 40vw;
+    height: 40vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
   .message {
-    font-size: 2.0em;
+    font-size: 2em;
     padding: 15px;
   }
 
   .next-button {
-    padding: 12px 25px; 
-    font-size: 1.1em; 
+    padding: 12px 25px;
+    font-size: 1.1em;
   }
 }
 
+
+/* PC */
 @media (min-width: 1025px) {
+
+  .heart {
+    width: 300px;
+    height: 300px;
+  }
+
   .message {
-    font-size: 3em; 
-    padding: 20px; 
+    font-size: 3em;
+    padding: 20px;
   }
 
   .next-button {
-    padding: 15px 30px; 
-    font-size: 1.2em; 
+    padding: 15px 30px;
+    font-size: 1.2em;
   }
 }
